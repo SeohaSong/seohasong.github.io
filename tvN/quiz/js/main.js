@@ -69,7 +69,7 @@ $(document).ready(() => {
     } else {
       if (countdown == time_pressure) {
         output = set_quiz();
-        keys.click((e) => {
+        keys.bind('click', (e) => {
           let key = $(e.currentTarget);
           answer += key.data('key');
           answer_view.html(answer);
@@ -80,7 +80,7 @@ $(document).ready(() => {
           key.addClass('clicked');
           setTimeout(() => {
             key.removeClass('clicked');
-          }, 200);
+          }, 100);
         });
       }
       console.log(output);
