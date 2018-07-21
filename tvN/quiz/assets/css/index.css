@@ -1,6 +1,8 @@
 body {
   margin: 0px;
   background: black;
+  user-select: none;
+  font-family: default-font;
 }
 
 #config {
@@ -28,7 +30,7 @@ body {
 
 #quiz-board > .status > .case {
   display: none;
-  height: 40%;
+  height: 60%;
   font-size: 70px;
   padding-top: 50px;
 }
@@ -124,4 +126,29 @@ body {
     width: 60px;
     line-height: calc(60px + 2px);
   }
+}
+
+@media only screen and (min-width: 1500px) {
+  #quiz-board > .status > .case {
+    font-size: 140px;
+  }
+  #quiz-board > .status span.bad{
+    font-size: 360px;
+  }
+  #quiz-board > .status span.good{
+    font-size: 360px;
+  }
+  #quiz-board > .status span.bussy{
+    font-size: 120px;
+  }
+  #quiz-board > .status > .countdown {
+    height: 250px;
+    width: 250px;
+    line-height: calc(250px + 2px);
+  }
+}
+
+@font-face {
+  font-family: default-font;
+  src: url('../fonts/apple-sd-gothic-neo-regular.otf');
 }

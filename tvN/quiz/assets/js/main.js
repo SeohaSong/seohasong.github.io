@@ -4,7 +4,7 @@ let init_display = (keys) => {
     let height_ = parseInt(height);
     keys.css('width', height);
     keys.css('line-height', (height_+4)+'px');
-    keys.css('font-size', height_/3);
+    keys.css('font-size', height_/3*2);
   }
   set_display(keys);
   $(window).resize(() => {
@@ -39,6 +39,7 @@ let set_quiz = () => {
     output = operation == '+' ? output+input_ : output-input_;
   }
   output += '';
+  console.log(output);
 
   $('[data-description]').html(description);
   set_case('i');
@@ -58,7 +59,7 @@ $(document).ready(() => {
   let keys = $('[data-key]');
   init_display(keys)
 
-  let supervisor = setInterval(() => {
+  let loop = setInterval(() => {
     $('[data-countdown]').html(countdown);
     if (countdown == 0) {
       keys.unbind('click');
@@ -74,7 +75,7 @@ $(document).ready(() => {
           answer += key.data('key');
           answer_view.html(answer);
           if (output == answer){
-            clearInterval(supervisor);
+            clearInterval(loop);
             set_case('o');
           }
           key.addClass('clicked');
@@ -83,7 +84,6 @@ $(document).ready(() => {
           }, 100);
         });
       }
-      console.log(output);
       countdown -= 1;
     }
   }, 1000)
