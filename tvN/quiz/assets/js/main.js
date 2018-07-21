@@ -51,42 +51,51 @@ let set_quiz = () => {
 $(document).ready(() => {
 
   let config = $('[data-config]');
-  let time_pressure = config.data('time-pressure');
+  let start_btn = $('[data-start]');
 
+  let time_pressure = config.data('time-pressure');
   let answer = '';
   let answer_view = $('[data-answer]');
   let countdown = time_pressure;
   let keys = $('[data-key]');
+
   init_display(keys)
 
-  let loop = setInterval(() => {
-    $('[data-countdown]').html(countdown);
-    if (countdown == 0) {
-      keys.unbind('click');
-      answer = '';
-      answer_view.html('?');
-      countdown = time_pressure;
-      set_case('x');
-    } else {
-      if (countdown == time_pressure) {
-        output = set_quiz();
-        keys.bind('click', (e) => {
-          let key = $(e.currentTarget);
-          answer += key.data('key');
-          answer_view.html(answer);
-          if (output == answer){
-            clearInterval(loop);
-            set_case('o');
-          }
-          key.addClass('clicked');
-          setTimeout(() => {
-            key.removeClass('clicked');
-          }, 100);
-        });
+  start_btn.click(() => {
+    start_btn.addClass('clicked');
+    setTimeout(() => {
+      start_btn.removeClass('on');
+      $('[data-status]').addClass('on');
+    }, 900);
+    let loop = setInterval(() => {
+      $('[data-countdown]').html(countdown);
+      if (countdown == 0) {
+        keys.unbind('click');
+        answer = '';
+        answer_view.html('?');
+        countdown = time_pressure;
+        set_case('x');
+      } else {
+        if (countdown == time_pressure) {
+          output = set_quiz();
+          keys.bind('click', (e) => {
+            let key = $(e.currentTarget);
+            answer += key.data('key');
+            answer_view.html(answer);
+            if (output == answer){
+              clearInterval(loop);
+              set_case('o');
+            }
+            key.addClass('clicked');
+            setTimeout(() => {
+              key.removeClass('clicked');
+            }, 100);
+          });
+        }
+        countdown -= 1;
       }
-      countdown -= 1;
-    }
-  }, 1000)
+    }, 1000)
+  })
 });
 
 
