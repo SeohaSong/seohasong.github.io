@@ -1,3 +1,17 @@
+let feed_back4key = (key) => {
+  key.addClass('clicked');
+  setTimeout(() => {
+    key.removeClass('clicked');
+  }, 100);
+}
+
+
+let set_case = (case_) => {
+  $('[data-case]').removeClass('on');
+  $('[data-case='+case_+']').addClass('on');
+}
+
+
 let init_display = (keys) => {
   let set_display = (keys) => {
     let height = keys.css('height');
@@ -14,12 +28,10 @@ let init_display = (keys) => {
     let key = $(v);
     key.html(key.data('key'));
   });
-}
-
-
-let set_case = (case_) => {
-  $('[data-case]').removeClass('on');
-  $('[data-case='+case_+']').addClass('on');
+  keys.bind('click', (e) => {
+    let key = $(e.currentTarget);
+    feed_back4key(key);
+  });
 }
 
 
@@ -62,11 +74,14 @@ $(document).ready(() => {
   init_display(keys)
 
   start_btn.click(() => {
+
     start_btn.addClass('clicked');
+
     setTimeout(() => {
       start_btn.removeClass('on');
       $('[data-status]').addClass('on');
     }, 900);
+
     let loop = setInterval(() => {
       $('[data-countdown]').html(countdown);
       if (countdown == 0) {
@@ -86,10 +101,7 @@ $(document).ready(() => {
               clearInterval(loop);
               set_case('o');
             }
-            key.addClass('clicked');
-            setTimeout(() => {
-              key.removeClass('clicked');
-            }, 100);
+            feed_back4key(key);
           });
         }
         countdown -= 1;
