@@ -114,19 +114,17 @@ var AppComponent = /** @class */ (function () {
             box.classList.add('widescreen');
         else
             box.classList.remove('widescreen');
-        setTimeout(function () {
-            if (window.innerHeight < box.clientHeight + 128) {
-                if (box.classList.contains('widescreen')) {
-                    box.style.width = (window.innerHeight - 32) * 2 + 'px';
-                }
-                else {
-                    box.style.width = (window.innerHeight - 64) / 2 + 'px';
-                }
+        if (window.innerHeight < box.clientHeight + 128) {
+            if (box.classList.contains('widescreen')) {
+                box.style.width = (window.innerHeight - 32) * 2 + 'px';
             }
-            else
-                box.style.width = '100%';
-            box.classList.remove('loading');
-        }, 500);
+            else {
+                box.style.width = (window.innerHeight - 64) / 2 + 'px';
+            }
+        }
+        else
+            box.style.width = '100%';
+        setTimeout(function () { return box.classList.remove('loading'); }, 200);
     };
     AppComponent.prototype.upload = function () {
         var _this = this;
