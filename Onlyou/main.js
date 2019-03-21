@@ -74,7 +74,7 @@ module.exports = "<div id='main-frame'>\n  <div id='main-frame-content'>\n    <d
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "#main-frame {\n  position: relative;\n  max-width: 400px;\n  min-width: 200px;\n  width: 100%;\n  margin: 32px; }\n  #main-frame:before {\n    content: '';\n    padding-top: calc(200% + 32px);\n    display: block; }\n  #main-frame #main-frame-content {\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between; }\n  #main-frame #main-frame-content .square {\n      position: relative;\n      background: gray;\n      width: 100%;\n      border-radius: 4px; }\n  #main-frame #main-frame-content .square:before {\n        content: '';\n        padding-top: 100%;\n        display: block; }\n  #main-frame #main-frame-content .square.on {\n        cursor: pointer;\n        background: white;\n        box-shadow: 4px 4px 8px gray inset, -4px -4px 8px gray inset; }\n  #main-frame #main-frame-content .square .square-box-content {\n        position: absolute;\n        top: 8px;\n        right: 8px;\n        bottom: 8px;\n        left: 8px;\n        display: flex;\n        justify-content: center;\n        align-items: center; }\n  #main-frame #main-frame-content .square #default-input-img, #main-frame #main-frame-content .square #default-output-img, #main-frame #main-frame-content .square #pending-img {\n        width: 100px;\n        height: 100px; }\n  #main-frame #main-frame-content .square #input-img, #main-frame #main-frame-content .square #output-img {\n        position: absolute;\n        width: 100%;\n        transition: 1s; }\n  #main-frame #main-frame-content .square #pending-img {\n        -webkit-animation-name: rotate;\n                animation-name: rotate;\n        -webkit-animation-duration: 2s;\n                animation-duration: 2s;\n        -webkit-animation-iteration-count: infinite;\n                animation-iteration-count: infinite;\n        -webkit-animation-timing-function: linear;\n                animation-timing-function: linear; }\n  #main-frame #main-frame-content #output-box:not(.pending) #pending-img,\n    #main-frame #main-frame-content #input-box:not(.on) #default-input-img,\n    #main-frame #main-frame-content #output-box.pending #default-output-img,\n    #main-frame #main-frame-content #output-box.on #default-output-img {\n      display: none; }\n  #main-frame #main-frame-content #output-box:not(.on) #output-img,\n    #main-frame #main-frame-content #input-box.on #input-img {\n      opacity: 0; }\n  #main-form {\n  display: none; }\n  @-webkit-keyframes rotate {\n  from {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg); }\n  to {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg); } }\n  @keyframes rotate {\n  from {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg); }\n  to {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg); } }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zZW9oYXNvbmcvU0VPSEFTT05HL2RhdGEvT25seW91L2NsaWVudC9zcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQU1FLGtCQUFrQjtFQUNsQixnQkFBZ0I7RUFDaEIsZ0JBQWdCO0VBQ2hCLFdBQVc7RUFDWCxZQUFZLEVBQUE7RUFWZDtJQUVJLFdBQVc7SUFDWCw4QkFBOEI7SUFDOUIsY0FBYyxFQUFBO0VBSmxCO0lBWUksa0JBQWtCO0lBQ2xCLE1BQU07SUFDTixRQUFRO0lBQ1IsU0FBUztJQUNULE9BQU87SUFDUCxhQUFhO0lBQ2Isc0JBQXNCO0lBQ3RCLDhCQUE4QixFQUFBO0VBbkJsQztNQStCTSxrQkFBa0I7TUFDbEIsZ0JBQWdCO01BQ2hCLFdBQVc7TUFDWCxrQkFBa0IsRUFBQTtFQWxDeEI7UUFzQlEsV0FBVztRQUNYLGlCQUFpQjtRQUNqQixjQUFjLEVBQUE7RUF4QnRCO1FBMkJRLGVBQWU7UUFDZixpQkFBaUI7UUFDakIsNERBQTRELEVBQUE7RUE3QnBFO1FBb0NRLGtCQUFrQjtRQUNsQixRQUFRO1FBQ1IsVUFBVTtRQUNWLFdBQVc7UUFDWCxTQUFTO1FBQ1QsYUFBYTtRQUNiLHVCQUF1QjtRQUN2QixtQkFBbUIsRUFBQTtFQTNDM0I7UUE4Q1EsWUFBWTtRQUNaLGFBQWEsRUFBQTtFQS9DckI7UUFrRFEsa0JBQWtCO1FBQ2xCLFdBQVc7UUFDWCxjQUFjLEVBQUE7RUFwRHRCO1FBdURRLDhCQUFzQjtnQkFBdEIsc0JBQXNCO1FBQ3RCLDhCQUFzQjtnQkFBdEIsc0JBQXNCO1FBQ3RCLDJDQUFtQztnQkFBbkMsbUNBQW1DO1FBQ25DLHlDQUFpQztnQkFBakMsaUNBQWlDLEVBQUE7RUExRHpDOzs7O01BaUVNLGFBQWEsRUFBQTtFQWpFbkI7O01BcUVNLFVBQVUsRUFBQTtFQUtoQjtFQUNFLGFBQWEsRUFBQTtFQUdmO0VBQ0U7SUFDRSwrQkFBdUI7WUFBdkIsdUJBQXVCLEVBQUE7RUFFekI7SUFDRSxpQ0FBeUI7WUFBekIseUJBQXlCLEVBQUEsRUFBQTtFQUw3QjtFQUNFO0lBQ0UsK0JBQXVCO1lBQXZCLHVCQUF1QixFQUFBO0VBRXpCO0lBQ0UsaUNBQXlCO1lBQXpCLHlCQUF5QixFQUFBLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIjbWFpbi1mcmFtZSB7XG4gICY6YmVmb3JlIHtcbiAgICBjb250ZW50OiAnJztcbiAgICBwYWRkaW5nLXRvcDogY2FsYygyMDAlICsgMzJweCk7XG4gICAgZGlzcGxheTogYmxvY2s7XG4gIH1cbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBtYXgtd2lkdGg6IDQwMHB4O1xuICBtaW4td2lkdGg6IDIwMHB4O1xuICB3aWR0aDogMTAwJTtcbiAgbWFyZ2luOiAzMnB4O1xuICAjbWFpbi1mcmFtZS1jb250ZW50IHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiAwO1xuICAgIHJpZ2h0OiAwO1xuICAgIGJvdHRvbTogMDtcbiAgICBsZWZ0OiAwO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG4gICAgLnNxdWFyZSB7XG4gICAgICAmOmJlZm9yZSB7XG4gICAgICAgIGNvbnRlbnQ6ICcnO1xuICAgICAgICBwYWRkaW5nLXRvcDogMTAwJTtcbiAgICAgICAgZGlzcGxheTogYmxvY2s7XG4gICAgICB9XG4gICAgICAmLm9uIHtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBiYWNrZ3JvdW5kOiB3aGl0ZTtcbiAgICAgICAgYm94LXNoYWRvdzogNHB4IDRweCA4cHggZ3JheSBpbnNldCwgLTRweCAtNHB4IDhweCBncmF5IGluc2V0O1xuICAgICAgfVxuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgYmFja2dyb3VuZDogZ3JheTtcbiAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgLnNxdWFyZS1ib3gtY29udGVudCB7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgdG9wOiA4cHg7XG4gICAgICAgIHJpZ2h0OiA4cHg7XG4gICAgICAgIGJvdHRvbTogOHB4O1xuICAgICAgICBsZWZ0OiA4cHg7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgfVxuICAgICAgI2RlZmF1bHQtaW5wdXQtaW1nLCAjZGVmYXVsdC1vdXRwdXQtaW1nLCAjcGVuZGluZy1pbWcge1xuICAgICAgICB3aWR0aDogMTAwcHg7XG4gICAgICAgIGhlaWdodDogMTAwcHg7XG4gICAgICB9XG4gICAgICAjaW5wdXQtaW1nLCAjb3V0cHV0LWltZyB7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgIHRyYW5zaXRpb246IDFzO1xuICAgICAgfVxuICAgICAgI3BlbmRpbmctaW1nIHtcbiAgICAgICAgYW5pbWF0aW9uLW5hbWU6IHJvdGF0ZTtcbiAgICAgICAgYW5pbWF0aW9uLWR1cmF0aW9uOiAycztcbiAgICAgICAgYW5pbWF0aW9uLWl0ZXJhdGlvbi1jb3VudDogaW5maW5pdGU7XG4gICAgICAgIGFuaW1hdGlvbi10aW1pbmctZnVuY3Rpb246IGxpbmVhcjtcbiAgICAgIH1cbiAgICB9XG4gICAgI291dHB1dC1ib3g6bm90KC5wZW5kaW5nKSAjcGVuZGluZy1pbWcsXG4gICAgI2lucHV0LWJveDpub3QoLm9uKSAjZGVmYXVsdC1pbnB1dC1pbWcsXG4gICAgI291dHB1dC1ib3gucGVuZGluZyAjZGVmYXVsdC1vdXRwdXQtaW1nLFxuICAgICNvdXRwdXQtYm94Lm9uICNkZWZhdWx0LW91dHB1dC1pbWcge1xuICAgICAgZGlzcGxheTogbm9uZTtcbiAgICB9XG4gICAgI291dHB1dC1ib3g6bm90KC5vbikgI291dHB1dC1pbWcsXG4gICAgI2lucHV0LWJveC5vbiAjaW5wdXQtaW1nIHtcbiAgICAgIG9wYWNpdHk6IDA7XG4gICAgfVxuICB9XG59XG5cbiNtYWluLWZvcm0ge1xuICBkaXNwbGF5OiBub25lO1xufVxuXG5Aa2V5ZnJhbWVzIHJvdGF0ZSB7XG4gIGZyb20ge1xuICAgIHRyYW5zZm9ybTogcm90YXRlKDBkZWcpO1xuICB9XG4gIHRvIHtcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgzNjBkZWcpO1xuICB9XG59Il19 */"
+module.exports = "#main-frame {\n  position: relative;\n  max-width: 400px;\n  min-width: 200px;\n  width: 100%;\n  margin: 16px; }\n  #main-frame:before {\n    content: '';\n    padding-top: calc(200% + 16px);\n    display: block; }\n  #main-frame #main-frame-content {\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between; }\n  #main-frame #main-frame-content .square {\n      position: relative;\n      background: gray;\n      width: 100%;\n      border-radius: 4px; }\n  #main-frame #main-frame-content .square:before {\n        content: '';\n        padding-top: 100%;\n        display: block; }\n  #main-frame #main-frame-content .square.on {\n        cursor: pointer;\n        background: white;\n        box-shadow: 4px 4px 8px gray inset, -4px -4px 8px gray inset; }\n  #main-frame #main-frame-content .square .square-box-content {\n        position: absolute;\n        top: 8px;\n        right: 8px;\n        bottom: 8px;\n        left: 8px;\n        display: flex;\n        justify-content: center;\n        align-items: center; }\n  #main-frame #main-frame-content .square #default-input-img, #main-frame #main-frame-content .square #default-output-img, #main-frame #main-frame-content .square #pending-img {\n        width: 100px;\n        height: 100px; }\n  #main-frame #main-frame-content .square #input-img, #main-frame #main-frame-content .square #output-img {\n        position: absolute;\n        width: 100%;\n        transition: 1s; }\n  #main-frame #main-frame-content .square #pending-img {\n        -webkit-animation-name: rotate;\n                animation-name: rotate;\n        -webkit-animation-duration: 2s;\n                animation-duration: 2s;\n        -webkit-animation-iteration-count: infinite;\n                animation-iteration-count: infinite;\n        -webkit-animation-timing-function: linear;\n                animation-timing-function: linear; }\n  #main-frame #main-frame-content #output-box:not(.pending) #pending-img,\n    #main-frame #main-frame-content #input-box:not(.on) #default-input-img,\n    #main-frame #main-frame-content #output-box.pending #default-output-img,\n    #main-frame #main-frame-content #output-box.on #default-output-img {\n      display: none; }\n  #main-frame #main-frame-content #output-box:not(.on) #output-img,\n    #main-frame #main-frame-content #input-box.on #input-img {\n      opacity: 0; }\n  #main-form {\n  display: none; }\n  @-webkit-keyframes rotate {\n  from {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg); }\n  to {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg); } }\n  @keyframes rotate {\n  from {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg); }\n  to {\n    -webkit-transform: rotate(360deg);\n            transform: rotate(360deg); } }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9zZW9oYXNvbmcvU0VPSEFTT05HL2RhdGEvT25seW91L2NsaWVudC9zcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQU1FLGtCQUFrQjtFQUNsQixnQkFBZ0I7RUFDaEIsZ0JBQWdCO0VBQ2hCLFdBQVc7RUFDWCxZQUFZLEVBQUE7RUFWZDtJQUVJLFdBQVc7SUFDWCw4QkFBOEI7SUFDOUIsY0FBYyxFQUFBO0VBSmxCO0lBWUksa0JBQWtCO0lBQ2xCLE1BQU07SUFDTixRQUFRO0lBQ1IsU0FBUztJQUNULE9BQU87SUFDUCxhQUFhO0lBQ2Isc0JBQXNCO0lBQ3RCLDhCQUE4QixFQUFBO0VBbkJsQztNQStCTSxrQkFBa0I7TUFDbEIsZ0JBQWdCO01BQ2hCLFdBQVc7TUFDWCxrQkFBa0IsRUFBQTtFQWxDeEI7UUFzQlEsV0FBVztRQUNYLGlCQUFpQjtRQUNqQixjQUFjLEVBQUE7RUF4QnRCO1FBMkJRLGVBQWU7UUFDZixpQkFBaUI7UUFDakIsNERBQTRELEVBQUE7RUE3QnBFO1FBb0NRLGtCQUFrQjtRQUNsQixRQUFRO1FBQ1IsVUFBVTtRQUNWLFdBQVc7UUFDWCxTQUFTO1FBQ1QsYUFBYTtRQUNiLHVCQUF1QjtRQUN2QixtQkFBbUIsRUFBQTtFQTNDM0I7UUE4Q1EsWUFBWTtRQUNaLGFBQWEsRUFBQTtFQS9DckI7UUFrRFEsa0JBQWtCO1FBQ2xCLFdBQVc7UUFDWCxjQUFjLEVBQUE7RUFwRHRCO1FBdURRLDhCQUFzQjtnQkFBdEIsc0JBQXNCO1FBQ3RCLDhCQUFzQjtnQkFBdEIsc0JBQXNCO1FBQ3RCLDJDQUFtQztnQkFBbkMsbUNBQW1DO1FBQ25DLHlDQUFpQztnQkFBakMsaUNBQWlDLEVBQUE7RUExRHpDOzs7O01BaUVNLGFBQWEsRUFBQTtFQWpFbkI7O01BcUVNLFVBQVUsRUFBQTtFQUtoQjtFQUNFLGFBQWEsRUFBQTtFQUdmO0VBQ0U7SUFDRSwrQkFBdUI7WUFBdkIsdUJBQXVCLEVBQUE7RUFFekI7SUFDRSxpQ0FBeUI7WUFBekIseUJBQXlCLEVBQUEsRUFBQTtFQUw3QjtFQUNFO0lBQ0UsK0JBQXVCO1lBQXZCLHVCQUF1QixFQUFBO0VBRXpCO0lBQ0UsaUNBQXlCO1lBQXpCLHlCQUF5QixFQUFBLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIjbWFpbi1mcmFtZSB7XG4gICY6YmVmb3JlIHtcbiAgICBjb250ZW50OiAnJztcbiAgICBwYWRkaW5nLXRvcDogY2FsYygyMDAlICsgMTZweCk7XG4gICAgZGlzcGxheTogYmxvY2s7XG4gIH1cbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBtYXgtd2lkdGg6IDQwMHB4O1xuICBtaW4td2lkdGg6IDIwMHB4O1xuICB3aWR0aDogMTAwJTtcbiAgbWFyZ2luOiAxNnB4O1xuICAjbWFpbi1mcmFtZS1jb250ZW50IHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiAwO1xuICAgIHJpZ2h0OiAwO1xuICAgIGJvdHRvbTogMDtcbiAgICBsZWZ0OiAwO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG4gICAgLnNxdWFyZSB7XG4gICAgICAmOmJlZm9yZSB7XG4gICAgICAgIGNvbnRlbnQ6ICcnO1xuICAgICAgICBwYWRkaW5nLXRvcDogMTAwJTtcbiAgICAgICAgZGlzcGxheTogYmxvY2s7XG4gICAgICB9XG4gICAgICAmLm9uIHtcbiAgICAgICAgY3Vyc29yOiBwb2ludGVyO1xuICAgICAgICBiYWNrZ3JvdW5kOiB3aGl0ZTtcbiAgICAgICAgYm94LXNoYWRvdzogNHB4IDRweCA4cHggZ3JheSBpbnNldCwgLTRweCAtNHB4IDhweCBncmF5IGluc2V0O1xuICAgICAgfVxuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgYmFja2dyb3VuZDogZ3JheTtcbiAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgLnNxdWFyZS1ib3gtY29udGVudCB7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgdG9wOiA4cHg7XG4gICAgICAgIHJpZ2h0OiA4cHg7XG4gICAgICAgIGJvdHRvbTogOHB4O1xuICAgICAgICBsZWZ0OiA4cHg7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgfVxuICAgICAgI2RlZmF1bHQtaW5wdXQtaW1nLCAjZGVmYXVsdC1vdXRwdXQtaW1nLCAjcGVuZGluZy1pbWcge1xuICAgICAgICB3aWR0aDogMTAwcHg7XG4gICAgICAgIGhlaWdodDogMTAwcHg7XG4gICAgICB9XG4gICAgICAjaW5wdXQtaW1nLCAjb3V0cHV0LWltZyB7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgIHRyYW5zaXRpb246IDFzO1xuICAgICAgfVxuICAgICAgI3BlbmRpbmctaW1nIHtcbiAgICAgICAgYW5pbWF0aW9uLW5hbWU6IHJvdGF0ZTtcbiAgICAgICAgYW5pbWF0aW9uLWR1cmF0aW9uOiAycztcbiAgICAgICAgYW5pbWF0aW9uLWl0ZXJhdGlvbi1jb3VudDogaW5maW5pdGU7XG4gICAgICAgIGFuaW1hdGlvbi10aW1pbmctZnVuY3Rpb246IGxpbmVhcjtcbiAgICAgIH1cbiAgICB9XG4gICAgI291dHB1dC1ib3g6bm90KC5wZW5kaW5nKSAjcGVuZGluZy1pbWcsXG4gICAgI2lucHV0LWJveDpub3QoLm9uKSAjZGVmYXVsdC1pbnB1dC1pbWcsXG4gICAgI291dHB1dC1ib3gucGVuZGluZyAjZGVmYXVsdC1vdXRwdXQtaW1nLFxuICAgICNvdXRwdXQtYm94Lm9uICNkZWZhdWx0LW91dHB1dC1pbWcge1xuICAgICAgZGlzcGxheTogbm9uZTtcbiAgICB9XG4gICAgI291dHB1dC1ib3g6bm90KC5vbikgI291dHB1dC1pbWcsXG4gICAgI2lucHV0LWJveC5vbiAjaW5wdXQtaW1nIHtcbiAgICAgIG9wYWNpdHk6IDA7XG4gICAgfVxuICB9XG59XG5cbiNtYWluLWZvcm0ge1xuICBkaXNwbGF5OiBub25lO1xufVxuXG5Aa2V5ZnJhbWVzIHJvdGF0ZSB7XG4gIGZyb20ge1xuICAgIHRyYW5zZm9ybTogcm90YXRlKDBkZWcpO1xuICB9XG4gIHRvIHtcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgzNjBkZWcpO1xuICB9XG59Il19 */"
 
 /***/ }),
 
@@ -97,19 +97,43 @@ var AppComponent = /** @class */ (function () {
         this.status = 'input';
     }
     AppComponent.prototype.ngOnInit = function () {
-        window.onload = this.controllDisplay;
+        var _this = this;
+        window.addEventListener('load', function () {
+            _this.controllDisplay();
+            _this.controllImage();
+            _this.input_img = document.getElementById('input-img');
+            _this.output_img = document.getElementById('output-img');
+            _this.input_box = document.getElementById('input-box');
+            _this.output_box = document.getElementById('output-box');
+        });
         window.onresize = this.controllDisplay;
+    };
+    AppComponent.prototype.controllDisplay = function () {
+        var box = document.getElementById('main-frame');
+        var cutoff = box.clientHeight + 128;
+        if (window.innerHeight < cutoff) {
+            box.style.width = (window.innerHeight - 64) / 2 + 'px';
+        }
+        else {
+            box.style.width = '100%';
+        }
+    };
+    AppComponent.prototype.controllImage = function () {
+        console.log(111);
     };
     AppComponent.prototype.upload = function () {
         var _this = this;
+        var uploader = document.getElementById('uploader');
         if (this.status == 'input') {
-            var uploader_1 = document.getElementById('uploader');
-            uploader_1.onchange = function () { return _this.startProcess(uploader_1); };
-            uploader_1.click();
+            uploader.onchange = function () { return _this.startProcess(uploader); };
+            uploader.click();
         }
         else if (this.status == 'output') {
             document.getElementById('input-box').classList.add('on');
             document.getElementById('output-box').classList.remove('on');
+            document.getElementById('input-img').setAttribute('src', '');
+            document.getElementById('output-img').setAttribute('src', '');
+            uploader.value = '';
             this.status = 'input';
         }
     };
@@ -118,15 +142,10 @@ var AppComponent = /** @class */ (function () {
             console.log(this.status);
         }
     };
-    AppComponent.prototype.controllDisplay = function () {
-        var box = document.getElementById('main-frame');
-        var cutoff = box.clientHeight + 100;
-        console.log(cutoff);
-        if (window.innerHeight < cutoff) {
-            box.style.width = (window.innerHeight - 128) / 2 + 'px';
-        }
-        else {
-            box.style.width = '100%';
+    AppComponent.prototype.beautifyImage = function (img) {
+        if (img.clientHeight > img.clientWidth) {
+            img.style.width = 'auto';
+            img.style.height = '100%';
         }
     };
     AppComponent.prototype.startProcess = function (uploader) {
@@ -135,31 +154,29 @@ var AppComponent = /** @class */ (function () {
         var reader = new FileReader();
         reader.readAsDataURL(uploader.files[0]);
         reader.onload = function () {
-            uploader.value = '';
-            var data = reader.result + '';
-            document.getElementById('input-img').setAttribute('src', data);
-            var input_box = document.getElementById('input-box');
-            var output_box = document.getElementById('output-box');
-            input_box.classList.remove('on');
-            input_box.classList.add('pending');
-            output_box.classList.add('pending');
-            setTimeout(function () {
-                var img = document.getElementById('output-img');
-                img.setAttribute('src', 'assets/img/test/output.png');
-                var loop_id = setInterval(function () {
-                    if (img.clientHeight > 0) {
-                        clearInterval(loop_id);
-                        if (img.clientHeight > img.clientWidth) {
-                            img.style.width = 'auto';
-                            img.style.height = '100%';
-                        }
-                        output_box.classList.add('on');
-                        input_box.classList.remove('pending');
-                        output_box.classList.remove('pending');
-                        _this.status = 'output';
-                    }
-                }, 100);
-            }, 2000);
+            _this.input_img.setAttribute('src', reader.result + '');
+            var loop_id = setInterval(function () {
+                if (_this.input_img.clientHeight > 0) {
+                    clearInterval(loop_id);
+                    _this.beautifyImage(_this.input_img);
+                    _this.input_box.classList.remove('on');
+                    _this.input_box.classList.add('pending');
+                    _this.output_box.classList.add('pending');
+                    setTimeout(function () {
+                        _this.output_img.setAttribute('src', 'assets/img/test/output.png');
+                        var loop_id = setInterval(function () {
+                            if (_this.output_img.clientHeight > 0) {
+                                clearInterval(loop_id);
+                                _this.beautifyImage(_this.output_img);
+                                _this.output_box.classList.add('on');
+                                _this.input_box.classList.remove('pending');
+                                _this.output_box.classList.remove('pending');
+                                _this.status = 'output';
+                            }
+                        }, 100);
+                    }, 2000);
+                }
+            }, 100);
         };
     };
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
