@@ -110,16 +110,16 @@ var AppComponent = /** @class */ (function () {
     AppComponent.prototype.controllDisplay = function () {
         var box = document.getElementById('main-frame');
         box.classList.add('loading');
-        var cond = window.innerHeight < window.innerWidth;
-        if (cond)
+        var cond1 = window.innerHeight < window.innerWidth;
+        if (cond1)
             box.classList.add('widescreen');
         else
             box.classList.remove('widescreen');
         box.style.width = '100%';
-        cond = !cond && window.innerHeight < box.clientHeight + 100;
-        if (cond)
+        var cond2 = window.innerHeight < box.clientHeight + 100;
+        if (cond1 && cond2)
             box.style.width = (window.innerHeight - 48) * 2 + 16 + 'px';
-        if (cond)
+        if (!cond1 && cond2)
             box.style.width = (window.innerHeight - 64) / 2 + 'px';
         box.classList.remove('loading');
     };
