@@ -63,7 +63,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id='main-frame'>\n  <div id='main-frame-content'>\n    <div (click)='upload()' id='upload-btn'>\n      <div id='input-box' class='square on'>\n        <div class='square-box-content'>\n          <img id='default-input-img' src=\"assets/img/default/input.svg\">\n          <img id='input-img'>\n        </div>\n      </div>\n    </div>\n    <div (click)='download()' id='download-btn'>\n      <div id='output-box' class='square'>\n        <div class='square-box-content'>\n          <img id='default-output-img' src=\"assets/img/default/output.svg\">\n          <img id='pending-img' src=\"assets/img/default/pending.svg\">\n          <img id='output-img'>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div id='main-form'>\n  <input id='uploader' type=\"file\">\n</div>\n"
+module.exports = "<div id='main-frame'>\n  <div id='main-frame-content'>\n    <div (click)='upload()' id='upload-btn'>\n      <div id='input-box' class='square on'>\n        <div class='square-box-content'>\n          <img id='default-input-img' src=\"assets/img/default/input.svg\">\n          <img id='input-img'>\n        </div>\n      </div>\n    </div>\n    <div (click)='download()' id='download-btn'>\n      <div id='output-box' class='square'>\n        <div class='square-box-content'>\n          <img id='default-output-img' src=\"assets/img/default/output.svg\">\n          <img id='pending-img' src=\"assets/img/default/pending.svg\">\n          <img id='output-img'>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n<div id='main-form'>\n  <input id='uploader' type=\"file\">\n</div>\n"
 
 /***/ }),
 
@@ -100,7 +100,6 @@ var AppComponent = /** @class */ (function () {
         var _this = this;
         window.addEventListener('load', function () {
             _this.controllDisplay();
-            _this.controllImage();
             _this.input_img = document.getElementById('input-img');
             _this.output_img = document.getElementById('output-img');
             _this.input_box = document.getElementById('input-box');
@@ -117,9 +116,6 @@ var AppComponent = /** @class */ (function () {
         else {
             box.style.width = '100%';
         }
-    };
-    AppComponent.prototype.controllImage = function () {
-        console.log(111);
     };
     AppComponent.prototype.upload = function () {
         var _this = this;
@@ -139,13 +135,20 @@ var AppComponent = /** @class */ (function () {
     };
     AppComponent.prototype.download = function () {
         if (this.status == 'output') {
-            console.log(this.status);
+            var link = document.createElement("a");
+            link.download = 'output';
+            link.href = this.output_url;
+            link.click();
         }
     };
     AppComponent.prototype.beautifyImage = function (img) {
         if (img.clientHeight > img.clientWidth) {
             img.style.width = 'auto';
             img.style.height = '100%';
+        }
+        else {
+            img.style.width = '100%';
+            img.style.height = 'auto';
         }
     };
     AppComponent.prototype.startProcess = function (uploader) {
@@ -163,7 +166,8 @@ var AppComponent = /** @class */ (function () {
                     _this.input_box.classList.add('pending');
                     _this.output_box.classList.add('pending');
                     setTimeout(function () {
-                        _this.output_img.setAttribute('src', 'assets/img/test/output.png');
+                        _this.output_url = 'assets/img/test/output.png';
+                        _this.output_img.setAttribute('src', _this.output_url);
                         var loop_id = setInterval(function () {
                             if (_this.output_img.clientHeight > 0) {
                                 clearInterval(loop_id);
