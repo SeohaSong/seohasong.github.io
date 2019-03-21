@@ -126,7 +126,7 @@ var AppComponent = /** @class */ (function () {
             else
                 box.style.width = '100%';
             box.classList.remove('loading');
-        }, 200);
+        }, 500);
     };
     AppComponent.prototype.upload = function () {
         var _this = this;
