@@ -90,6 +90,9 @@ MIT
 @angular/router
 MIT
 
+@angular/service-worker
+MIT
+
 @ionic-native/core
 MIT
 
