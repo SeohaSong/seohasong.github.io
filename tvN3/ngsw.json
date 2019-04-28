@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1556425071303,
+  "timestamp": 1556426953381,
   "index": "/tvN3/index.html",
   "assetGroups": [
     {
@@ -182,7 +182,7 @@
         "/tvN3/common.c8e12f4306f319d4e463.js",
         "/tvN3/es2015-polyfills.2306969ab6640fe7476f.js",
         "/tvN3/index.html",
-        "/tvN3/main.b4054154bd5a47f7d8b0.js",
+        "/tvN3/main.af95114972cb37cef1b1.js",
         "/tvN3/polyfills.1ce30dd08ac13ab445a6.js",
         "/tvN3/runtime.34a731170abe90b346d0.js",
         "/tvN3/styles.ffa4d59e1b16ccc8da68.css"
@@ -203,6 +203,7 @@
         "/tvN3/assets/icons/icon-512x512.png",
         "/tvN3/assets/icons/icon-72x72.png",
         "/tvN3/assets/icons/icon-96x96.png",
+        "/tvN3/assets/plate.png",
         "/tvN3/assets/shapes.svg"
       ],
       "patterns": []
@@ -390,11 +391,12 @@
     "/tvN3/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
     "/tvN3/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/tvN3/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/tvN3/assets/plate.png": "0feb9342412e462805d4751fa0bcc4a2b4fdcf3a",
     "/tvN3/assets/shapes.svg": "5413e95adabcb2cb639970051f55e0ddb64ace53",
     "/tvN3/common.c8e12f4306f319d4e463.js": "8ec826e94c1e57f2b757bffa1e830e392b432eb2",
     "/tvN3/es2015-polyfills.2306969ab6640fe7476f.js": "b00a4b2850c0d7915e682a20ae74ef3501252dda",
-    "/tvN3/index.html": "699e6b489f016baa8711e9ffa3ea4069ea372593",
-    "/tvN3/main.b4054154bd5a47f7d8b0.js": "ee0821aec6c061dcb87de6f9181ad08f3b600b65",
+    "/tvN3/index.html": "fa728f2290c52b05225d844067085db80e2dbf3b",
+    "/tvN3/main.af95114972cb37cef1b1.js": "5e04232780c59db9704efb7b493eedb52c2a1219",
     "/tvN3/polyfills.1ce30dd08ac13ab445a6.js": "3947bf302a3725a992ce97d785fdbbc932f33be2",
     "/tvN3/runtime.34a731170abe90b346d0.js": "614a6b80a72f4ff706b71ddb0cad5b15fac04292",
     "/tvN3/styles.ffa4d59e1b16ccc8da68.css": "0fb2913aafc71c8a35a459f0de3c412679319e81"
