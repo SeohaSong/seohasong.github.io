@@ -1,4 +1,6 @@
 window.onload = () => {
-  let body = document.getElementsByTagName('body')[0]
-  body.style.opacity = 1
+  let background = document.getElementById('background')
+  setTimeout(() => {
+    background.style.opacity = 1
+  }, 1000)
 }
