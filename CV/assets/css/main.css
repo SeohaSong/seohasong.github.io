@@ -46,15 +46,17 @@
 
 html {
   user-select: none;
+  background: black;
 }
 
 body {
+  opacity: 0;
+  transition: 1s;
   position: relative;
   margin: 0;
   padding: 0;
-  background: black;
   font-family: 'apple';
-  font-weight: 400;
+  font-weight: 200;
   color: rgba(0, 0, 0, 0.65);
   text-shadow: 1px 1px 2px rgb(161, 145, 127);
 }
@@ -70,6 +72,7 @@ body:before {
 }
 h3 {
   margin-bottom: 10px;
+  font-weight: 500;
 }
 p {
   margin: 0;
@@ -145,7 +148,7 @@ ul {
   font-size: 16px;
   margin-left: 145px;
   text-shadow: none;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 #left-section {
