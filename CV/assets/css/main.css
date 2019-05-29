@@ -1,0 +1,171 @@
+@font-face {
+  font-family: 'apple';
+  src: url('../fonts/AppleSDGothicNeoT.ttf');
+  font-weight: 100;
+}
+@font-face {
+  font-family: 'apple';
+  src: url('../fonts/AppleSDGothicNeoUL.ttf');
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'apple';
+  src: url('../fonts/AppleSDGothicNeoL.ttf');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'apple';
+  src: url('../fonts/AppleSDGothicNeoR.ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'apple';
+  src: url('../fonts/AppleSDGothicNeoM.ttf');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'apple';
+  src: url('../fonts/AppleSDGothicNeoSB.ttf');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'apple';
+  src: url('../fonts/AppleSDGothicNeoB.ttf');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'apple';
+  src: url('../fonts/AppleSDGothicNeoEB.ttf');
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'apple';
+  src: url('../fonts/AppleSDGothicNeoH.ttf');
+  font-weight: 900;
+}
+
+html {
+  user-select: none;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background: black;
+  font-family: 'apple';
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.65);
+  text-shadow: 1px 1px 2px rgb(161, 145, 127);
+}
+body:before {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 21cm;
+  height: 29.7cm;
+  background: white;
+  content: '';
+}
+h3 {
+  margin-bottom: 10px;
+}
+p {
+  margin: 0;
+  font-size: 14px;
+  position: relative;
+}
+p > .text-placeholder {
+  color: rgba(0, 0, 0, 0);
+  text-shadow: none;
+}
+p > .content-with-icon {
+  position: absolute;
+  top: 0px;
+  left: 24px;
+}
+li {
+  list-style: none;
+}
+ul {
+  margin: 0;
+}
+
+#background {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 21cm;
+  height: 29.7cm;
+  background: linear-gradient(60deg, rgb(107, 95, 81), rgba(161, 145, 127, 0.2));
+}
+#background:before {
+  position: absolute;
+  top: 210px;
+  right: 60px;
+  bottom: -20px;
+  left: 60px;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: -10px 0px 30px rgba(0, 0, 0, 0.60);
+  border-radius: 10% 5% 0% 0%;
+  content: '';
+}
+#background > .img {
+  position: absolute;
+  right: 0;
+  height: 600px;
+  opacity: 0.15;
+}
+
+#main {
+  background: linear-gradient(90deg, #E7E3DE, #E7E3DE 40%, white 20%, white 100%);
+  position: absolute;
+  top: 210px;
+  right: 60px;
+  bottom: 0px;
+  left: 60px;
+}
+
+#name {
+  position: absolute;
+  font-size: 60px;
+  top: 60px;
+  left: 105px;
+}
+#name > .first {
+  line-height: 60px;
+}
+#name > .last {
+  line-height: 60px;
+  margin-left: 50px;
+}
+#name > .korean {
+  font-size: 16px;
+  margin-left: 145px;
+  text-shadow: none;
+  font-weight: 600;
+}
+
+#left-section {
+  position: absolute;
+  left: 30px;
+  top: 210px;
+}
+#left-section > p, #left-section li {
+  font-size: 14px;
+}
+
+#right-section {
+  color: rgba(0, 0, 0, 0.9);
+  text-shadow: 1px 1px 2px rgb(161, 145, 127, 0.5);
+  position: absolute;
+  top: 240px;
+  right: 60px;
+  left: 300px;
+}
+#right-section > p, #right-section li {
+  font-size: 12px;
+}
+
