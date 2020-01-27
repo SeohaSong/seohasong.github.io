@@ -1,6 +1,7 @@
-var CACHE_NAME = 'my-site-cache-v1';
+var CACHE_NAME = 'seohasong';
 var urlsToCache = [
   "/",
+  "/js/main.js",
   "/favicon.ico",
 ];
 self.addEventListener('install', function(event) {
