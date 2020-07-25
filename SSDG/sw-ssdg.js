@@ -1,13 +1,13 @@
 let files = [
-  "./index.html",
-  "./menifest.json",
-  "./native.js",
-  "./native.wasm",
-  "./sw.js",
-  "./sw-ssdg.js",
-  "./assets/shapes.svg",
-  "./assets/icon/favicon.png",
-  "./assets/icon/icon.png"
+  "index.html",
+  "menifest.json",
+  "native.js",
+  "native.wasm",
+  "sw.js",
+  "sw-ssdg.js",
+  "assets/shapes.svg",
+  "assets/icon/favicon.png",
+  "assets/icon/icon.png"
 ];
 
 function cacheFiles(event) {
