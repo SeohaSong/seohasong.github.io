@@ -1,5 +1,6 @@
 function run() {
-  navigator.serviceWorker.register("./sw-ssdg.js")
+  let file = "./sw-ssdg.js";
+  navigator.serviceWorker.register(file)
                          .then(swr => console.log(file));
 }
 
