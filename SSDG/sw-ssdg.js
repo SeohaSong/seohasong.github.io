@@ -1,9 +1,29 @@
+// function cacheFiles(e) {
+//   e.respondWith(
+//     caches.match(e.request).then(function(r) {
+//       console.log('[Service Worker] Fetching resource: '+e.request.url);
+//       return r || fetch(e.request).then(function(response) {
+//         return caches.open("ssdg").then(function(cache) {
+//           console.log('[Service Worker] Caching new resource: '+e.request.url);
+//           cache.put(e.request, response.clone());
+//           return response;
+//         });
+//       });
+//     })
+//   );
+// }
+
+// self.addEventListener('fetch', cacheFiles);
+
+
 'use strict';
 
 
 const cacheName = 'ssdg';
-const filesToCache = ["assets/.", "native/.", "sw/."];
-const neverCacheUrls = [/\/wp-admin/,/\/wp-login/,/preview=true/];
+const startPage = '.';
+const offlinePage = '.';
+const filesToCache = [startPage, offlinePage];
+const neverCacheUrls = [/\/\w+$/];
 
 // Install
 self.addEventListener('install', function(e) {
