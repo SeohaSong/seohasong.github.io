@@ -1,15 +1,13 @@
 function cacheFiles(event) {
 
   let files = [
-    "index.html",
-    "menifest.json",
+    "assets/icon/favicon.png",
+    "assets/icon/icon.png",
+    "assets/shapes.svg",
     "native.js",
     "native.wasm",
     "sw.js",
-    "sw-ssdg.js",
-    "assets/shapes.svg",
-    "assets/icon/icon.png",
-    "assets/icon/favicon.png"
+    "sw-ssdg.js"
   ];
 
   event.waitUntil(
