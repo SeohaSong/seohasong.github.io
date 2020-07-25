@@ -1,5 +1,5 @@
-function run() {
-  let file = "sw-ssdg.js";
+function run(e) {
+  let file = "./sw-ssdg.js";
   navigator.serviceWorker.register(file)
                          .then(() => console.log(file));
 }
