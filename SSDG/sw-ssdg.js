@@ -1,4 +1,4 @@
-var files = [
+let files = [
   "/index.html",
   "/menifest.json",
   "/native.js",
@@ -12,8 +12,7 @@ var files = [
 
 function cacheFiles(event) {
   event.waitUntil(
-    caches.open("ssdg")
-    .then(function(cache) {
+    caches.open("ssdg").then(function(cache) {
       console.log('caching...');
       files.forEach(val => {
         console.log("\t", val);
