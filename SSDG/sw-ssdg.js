@@ -1,16 +1,17 @@
-let files = [
-  "index.html",
-  "menifest.json",
-  "native.js",
-  "native.wasm",
-  "sw.js",
-  "sw-ssdg.js",
-  "assets/shapes.svg",
-  "assets/icon/favicon.png",
-  "assets/icon/icon.png"
-];
-
 function cacheFiles(event) {
+
+  let files = [
+    "index.html",
+    "menifest.json",
+    "native.js",
+    "native.wasm",
+    "sw.js",
+    "sw-ssdg.js",
+    "assets/shapes.svg",
+    "assets/icon/icon.png",
+    "assets/icon/favicon.png"
+  ];
+
   event.waitUntil(
     caches.open("ssdg").then(function(cache) {
       console.log('caching...');
