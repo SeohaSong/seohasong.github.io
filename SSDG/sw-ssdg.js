@@ -7,7 +7,8 @@ function cacheFiles(event) {
     "native.js",
     "native.wasm",
     "sw.js",
-    "sw-ssdg.js"
+    "sw-ssdg.js",
+    "/"
   ];
 
   event.waitUntil(
