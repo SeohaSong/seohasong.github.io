@@ -2,7 +2,7 @@
 
 
 const cacheName = 'ssdg';
-const filesToCache = ["assets", "native", "sw"];
+const filesToCache = ["./assets", "./native", "./sw"];
 const neverCacheUrls = [/\/wp-admin/,/\/wp-login/,/preview=true/];
 
 // Install
