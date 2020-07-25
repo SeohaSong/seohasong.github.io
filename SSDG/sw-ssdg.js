@@ -19,10 +19,8 @@
 'use strict';
 
 
-const cacheName = 'superpwa.com-superpwa-2.1.1';
-const startPage = '.';
-const offlinePage = '.';
-const filesToCache = [startPage, offlinePage, './assets/icon/icon192.png'];
+const cacheName = 'ssdg';
+const filesToCache = ["assets", "native", "sw"];
 const neverCacheUrls = [/\/wp-admin/,/\/wp-login/,/preview=true/];
 
 // Install
