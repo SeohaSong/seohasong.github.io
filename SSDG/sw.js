@@ -1,7 +1,5 @@
 function run() {
-  const base = document.getElementsByTagName('base')[0].getAttribute("href");
-  let file = base + "sw-ssdg.js";
-  navigator.serviceWorker.register(file)
+  navigator.serviceWorker.register("./sw-ssdg.js")
                          .then(swr => console.log(file));
 }
 
