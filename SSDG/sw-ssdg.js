@@ -1,28 +1,9 @@
-// function cacheFiles(e) {
-//   e.respondWith(
-//     caches.match(e.request).then(function(r) {
-//       console.log('[Service Worker] Fetching resource: '+e.request.url);
-//       return r || fetch(e.request).then(function(response) {
-//         return caches.open("ssdg").then(function(cache) {
-//           console.log('[Service Worker] Caching new resource: '+e.request.url);
-//           cache.put(e.request, response.clone());
-//           return response;
-//         });
-//       });
-//     })
-//   );
-// }
-
-// self.addEventListener('fetch', cacheFiles);
-
-
 'use strict';
 
 
 const cacheName = 'ssdg';
-const startPage = '.';
 const offlinePage = '.';
-const filesToCache = [startPage, offlinePage];
+const files = [offlinePage];
 const neverCacheUrls = [/\/\w+$/];
 
 // Install
@@ -31,7 +12,7 @@ self.addEventListener('install', function(e) {
 	e.waitUntil(
 		caches.open(cacheName).then(function(cache) {
 			console.log('SuperPWA service worker caching dependencies');
-			filesToCache.map(function(url) {
+			files.map(function(url) {
 				return cache.add(url).catch(function (reason) {
 					return console.log('SuperPWA: ' + String(reason) + ' ' + url);
 				});
