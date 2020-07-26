@@ -2,7 +2,7 @@
 
 
 const cacheName = 'ssdg';
-const offlinePage = '.';
+const offlinePage = './index.html';
 const files = [offlinePage];
 const targetUrls = [/\/\w+\.[^\/]+$/];
 // const targetUrls = [/\/assets\//];
