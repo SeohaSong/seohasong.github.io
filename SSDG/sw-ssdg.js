@@ -1,15 +1,15 @@
 'use strict';
 
+importScripts("./service-worker.js");
 
 const cacheName = 'ssdg';
 const offlinePage = '.';
-const files = [offlinePage];
+const files = [];
 const targetUrls = [/\/assets\//];
 
 
 self.addEventListener('install', function(e) {
 	console.log('SuperPWA service worker installation');
-	self.skipWaiting();
 	e.waitUntil(
 		caches.open(cacheName).then(function(cache) {
 			console.log('SuperPWA service worker caching dependencies');
@@ -26,14 +26,14 @@ self.addEventListener('install', function(e) {
 self.addEventListener('activate', function(e) {
 	console.log('SuperPWA service worker activation');
 	e.waitUntil(
-		caches.keys().then(function(keyList) {
-			return Promise.all(keyList.map(function(key) {
-				if ( key !== cacheName ) {
-					console.log('SuperPWA old cache removed', key);
-					return caches.delete(key);
-				}
-			}));
-		})
+		// caches.keys().then(function(keyList) {
+		// 	return Promise.all(keyList.map(function(key) {
+		// 		if ( key !== cacheName ) {
+		// 			console.log('SuperPWA old cache removed', key);
+		// 			return caches.delete(key);
+		// 		}
+		// 	}));
+		// })
 	);
 	return self.clients.claim();
 });
