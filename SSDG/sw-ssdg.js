@@ -6,6 +6,7 @@ const offlinePage = '.';
 const files = [offlinePage];
 const targetUrls = [/\/assets\//];
 
+self.skipWaiting();
 
 self.addEventListener('install', function(e) {
 	console.log('SuperPWA service worker installation');
