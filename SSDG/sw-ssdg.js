@@ -4,7 +4,8 @@
 const cacheName = 'ssdg';
 const offlinePage = '.';
 const files = [];
-const targetUrls = [/\/assets\//];
+const targetUrls = [];
+// const targetUrls = [/\/assets\//];
 
 
 self.addEventListener('install', function(e) {
