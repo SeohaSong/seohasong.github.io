@@ -6,10 +6,10 @@ const offlinePage = '.';
 const files = [offlinePage];
 const targetUrls = [/\/assets\//];
 
-self.skipWaiting();
 
 self.addEventListener('install', function(e) {
 	console.log('SuperPWA service worker installation');
+	self.skipWaiting();
 	e.waitUntil(
 		caches.open(cacheName).then(function(cache) {
 			console.log('SuperPWA service worker caching dependencies');
