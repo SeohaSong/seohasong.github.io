@@ -3,16 +3,8 @@
 
 const cacheName = 'ssdg';
 const offlinePage = '.';
-const files = [offlinePage];
-const neverCacheUrls = [/\/\w+$/, /\/static\//];
-
-
-function checkNeverCacheList(url) {
-	if ( this.match(url) ) {
-		return false;
-	}
-	return true;
-}
+const files = [];
+const targetUrls = [/\/assets\//];
 
 
 self.addEventListener('install', function(e) {
@@ -48,9 +40,7 @@ self.addEventListener('activate', function(e) {
 
 self.addEventListener('fetch', function(e) {
 	
-	// Return if the current request url is in the never cache list
-	if ( ! neverCacheUrls.every(checkNeverCacheList, e.request.url) ) {
-	  console.log( 'SuperPWA: Current request is excluded from cache.' );
+	if (!targetUrls.every(url => e.request.url.match(url))) {
 	  return;
 	}
 	
@@ -65,7 +55,7 @@ self.addEventListener('fetch', function(e) {
 	// For POST requests, do not use the cache. Serve offline page if offline.
 	if ( e.request.method !== 'GET' ) {
 		e.respondWith(
-			fetch(e.request).catch( function() {
+			fetch(e.request).catch(function(){
 				return caches.match(offlinePage);
 			})
 		);
