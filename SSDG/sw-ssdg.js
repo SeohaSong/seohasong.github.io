@@ -1,6 +1,11 @@
 'use strict';
 
-importScripts("./service-worker.js");
+
+try {
+	importScripts("./service-worker.js");
+}
+catch { }
+
 
 const cacheName = 'ssdg';
 const offlinePage = '.';
@@ -25,25 +30,25 @@ self.addEventListener('install', function(e) {
 
 self.addEventListener('activate', function(e) {
 	console.log('SuperPWA service worker activation');
-	e.waitUntil(
-		// caches.keys().then(function(keyList) {
-		// 	return Promise.all(keyList.map(function(key) {
-		// 		if ( key !== cacheName ) {
-		// 			console.log('SuperPWA old cache removed', key);
-		// 			return caches.delete(key);
-		// 		}
-		// 	}));
-		// })
-	);
+	e.waitUntil(null);
+	// e.waitUntil(
+	// 	caches.keys().then(function(keyList) {
+	// 		return Promise.all(keyList.map(function(key) {
+	// 			if ( key !== cacheName ) {
+	// 				console.log('SuperPWA old cache removed', key);
+	// 				return caches.delete(key);
+	// 			}
+	// 		}));
+	// 	})
+	// );
 	return self.clients.claim();
 });
 
 
 self.addEventListener('fetch', function(e) {
 	
-	if (!targetUrls.every(url => e.request.url.match(url))) {
+	if (!targetUrls.every(url => e.request.url.match(url)))
 	  return;
-	}
 	
 	// Return if request url protocal isn't http or https
 	if ( ! e.request.url.match(/^(http|https):\/\//i) )
