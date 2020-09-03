@@ -2,7 +2,17 @@ importScripts("./service-worker.js")
 const cacheName = 'ssdg';
 const offlinePage = '.';
 const files = [
+	"./assets/icon/avatar.png",
+	"./assets/icon/bag.png",
+	"./assets/icon/camera.png",
 	"./assets/icon/favicon.png",
+	"./assets/icon/feed.png",
+	"./assets/icon/heart.png",
+	"./assets/icon/main.png",
+	"./assets/icon/profile.png",
+	"./assets/icon/search.png",
+	"./assets/img/sample.png",
+	"./assets/img/sample2.png",
 	"./assets/native/main.js",
 	"./assets/native/main.wasm",
 	"./assets/sw/main.js"
